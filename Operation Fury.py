@@ -16,9 +16,17 @@ import random
 # Weather condition list using the random.choice library
 # to remember choose a condition and storing it in its brain
 def weather():
-    weather_forecast = ["Rainy", "Snowy", "Sunny", "Cloudy", "Foggy", "Storming", "Icy"]
+    weather_forecast = ["Raining", "Snowing", "Sunny", "Cloudy", "Foggy", "Storming", "Icy"]
     weather_condition = random.choice(weather_forecast)
     return weather_condition
 
 
-print(weather())
+weather_alert = weather()
+
+
+def vehicle_response_system():
+    if weather_alert == "Icy":
+        print("\nVRS has changed your alarm 30 minutes earlier based on the NWS forecast of", weather_alert, "roads")
+
+
+vehicle_response_system()
