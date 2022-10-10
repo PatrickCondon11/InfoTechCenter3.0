@@ -2,10 +2,10 @@
 # Devoloper: Patrick Condon
 # Version: 1.0
 
-'''
+"""
 Our welcome screen will start our program letting drivers know
 that the info tech center OS is loading
-'''
+"""
 
 # Import Libraries Here
 from time import sleep  # We imported the sleep function from the time library
