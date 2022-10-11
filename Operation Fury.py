@@ -1,14 +1,18 @@
+# **********************************************************************************************************************
+# Import Libraries Here
+from time import sleep  # We imported the sleep function from the time library
+import random
+# **********************************************************************************************************************
+
+
 # Welcome Screen
-# Devoloper: Patrick Condon
+# Developer: Patrick Condon
 # Version: 1.0
 
 """
 Our welcome screen will start our program letting drivers know
 that the info tech center OS is loading
 """
-
-# Import Libraries Here
-from time import sleep  # We imported the sleep function from the time library
 
 print("\033[3;32m")
 print("\n\nWelcome to Operation Fury Info Tech Center")
@@ -19,6 +23,8 @@ for i in range(3):
     sleep(1)
 print("\033[3;34mOS Booted Up\033[0m")
 sleep(1.5)
+
+
 # Weather
 # Developer: Patrick Condon
 # Version 1.0
@@ -30,12 +36,9 @@ picking from a list - using if, elif & else statements
 to check the condition and print a specific list element
 """
 
-# import libraries here
-import random
-
-
 # Weather condition list using the random.choice library
 # to remember choose a condition and storing it in its brain
+
 def weather():
     weather_forecast = ["Raining", "Snowing", "Sunny", "Cloudy", "Foggy", "Storming", "Icy"]
     weather_condition = random.choice(weather_forecast)
