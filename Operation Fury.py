@@ -22,7 +22,13 @@ def gas_level_gauge():
 
 # Variable calling the gas_level_gauge to store value once
 gas_level_indicator = gas_level_gauge()
+random_int4 = random.randint(5, 25)
 
+
+def list_of_gas_stations():
+    gas_station_list = ["Shell", "Circle K", "Marathon", "Speedway", "Meijer"]
+    gas_station_nearby = random.choice(gas_station_list)
+    return gas_station_nearby
 
 def gas_level_alert():
     if gas_level_indicator == "Empty":
@@ -30,12 +36,18 @@ def gas_level_alert():
         sleep(1)
         print("Calling Emergency Contact")
 
+
     elif gas_level_indicator == "Low":
-        print("***WARNING YOUR GAS TANK IS LOW***\n***You have less than 20 miles left***")
+        print("***WARNING YOUR GAS TANK IS  EXTREMELY LOW***\n***You have less than 20 miles left***")
         sleep(1)
-        print("Finding closest gas station")
+        print("Finding closest gas station using google maps")
         sleep(2)
-        print("The closest gas station is", random.randint(5, 25), "miles away.")
+        print("The closest gas station is a", list_of_gas_stations(),"gas station", random_int4, "miles away.")
+        if random_int4 > 20:
+            sleep(1)
+            print("***WARNING***\nYou will not reach the closest gas station")
+            sleep(2)
+            print("Calling Emergency Contact")
 
     elif gas_level_indicator == "Quarter Tank":
         print("Your gas tank is at a quarter of a tank and you have 80 miles left.")
