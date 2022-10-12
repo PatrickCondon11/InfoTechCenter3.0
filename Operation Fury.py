@@ -31,27 +31,32 @@ def list_of_gas_stations():
     gas_station_nearby = random.choice(gas_station_list)
     return gas_station_nearby
 
+def gas_station_street
+    street_name_list = 
+
+
 
 def gas_level_alert():
     if gas_level_indicator == "Empty":
         print("\033[3;31m***WARNING YOU ARE ON EMPTY***\033[0m")
         sleep(1)
-        print("Calling Emergency Contact")
+        print("Calling emergency contact")
         sleep(2)
+        print("Successfully called emergency contact")
         if emergency_contact_availability == 0:
             print("Emergency contact unavailable")
             calling_second_contact = input("Do you want to call secondary emergency contact\nType Y or N.\n")
             if calling_second_contact == "Y":
                 sleep(2)
-                print("Calling Emergency Contact")
+                print("Calling emergency contact")
             if calling_second_contact == "y":
                 sleep(2)
-                print("Calling Emergency Contact")
-        print("Successfully called emergency contact")
-
+                print("Calling secondary emergency contact")
+                sleep(2)
+                print("Successfully called secondary emergency contact")
 
     elif gas_level_indicator == "Low":
-        print("\033[3;31m***WARNING YOUR GAS TANK IS  EXTREMELY LOW***\n***You have less than 20 miles left***")
+        print("\033[3;31m***WARNING YOUR GAS TANK IS  EXTREMELY LOW***\n***You have 20 miles left***")
         sleep(1)
         print("\033[0mFinding closest gas station using google maps")
         sleep(2)
@@ -68,20 +73,23 @@ def gas_level_alert():
                 calling_second_contact = input("Do you want to call secondary emergency contact\nType Y or N.\n")
                 if calling_second_contact == "Y":
                     sleep(2)
-                    print("Calling Emergency Contact")
+                    print("Calling emergency contact")
                 if calling_second_contact == "y":
                     sleep(2)
-                    print("Calling Emergency Contact")
+                    print("Calling secondary emergency contact")
+                    sleep(2)
             print("Successfully called emergency contact")
 
     elif gas_level_indicator == "Quarter Tank":
-        print("Your gas tank is at a quarter of a tank and you have", random.int(50, 100), "miles left.")
+        print("Your gas tank is at a quarter of a tank and you have", random.randint(50, 100), "miles left.")
+        print("The closest gas station is a", list_of_gas_stations(), "gas station", miles_to_gas_station,
+              "miles away.")
 
     elif gas_level_indicator == "Half Tank":
-        print("Your gas tank is at half of a tank and you have", random.int(125, 175), "miles left.")
+        print("Your gas tank is at half of a tank and you have", random.randint(125, 175), "miles left.")
 
     elif gas_level_indicator == "Three Quarter Tank":
-        print("Your gas tank is at a quarter of a tank and you have", random.int(200, 250), "miles left.")
+        print("Your gas tank is at a quarter of a tank and you have", random.randint(200, 250), "miles left.")
 
     else:
         print("Your gas tank is at a quarter of a tank and you have 300 miles left.")
