@@ -1,8 +1,9 @@
 # **********************************************************************************************************************
 # Import Libraries Here
 from time import sleep
-#We imported the sleep function from the time library
+# We imported the sleep function from the time library
 import random
+
 # **********************************************************************************************************************
 
 
@@ -22,9 +23,8 @@ print("\n\033[3;34mOperation Fury's Operating System booting up\033[0m")
 for i in range(3):
     print("OS Booting Up...")
     sleep(1)
-print("\033[3;34mOS Booted Up\033[0m\n")
+print("\033[3;34mOS Booted Up\033[0m")
 sleep(1.5)
-
 
 # Gasoline
 # Developer: Patrick Condon
@@ -35,6 +35,7 @@ Define a function to check our gas gauge and determine how far
 we have until we need gasoline based on an if,elif,else
 condition
 """
+
 
 # Gas level function
 def gas_level_gauge():
@@ -83,9 +84,10 @@ def gas_station_street():
 gas_station_street()
 """
 
+
 def gas_level_alert():
     if gas_level_indicator == "Empty":
-        print("\033[3;31m***WARNING YOU ARE ON EMPTY***\033[0m")
+        print("\n\033[3;31m***WARNING YOU ARE ON EMPTY***\033[0m")
         sleep(1)
         print("Calling emergency contact")
         sleep(2)
@@ -98,12 +100,12 @@ def gas_level_alert():
                 print("Calling secondary emergency contact")
 
     elif gas_level_indicator == "Low":
-        print("\033[3;31m***WARNING YOUR GAS TANK IS  EXTREMELY LOW***\n***You have 20 miles left***")
+        print("\n\033[3;31m***WARNING YOUR GAS TANK IS  EXTREMELY LOW***\n***You have 20 miles left***")
         sleep(1)
         print("\033[0mFinding closest gas station using google maps")
         sleep(2)
         print("The closest gas station is a", list_of_gas_stations(), "gas station", miles_to_gas_station,
-              "miles away on",)
+              "miles away on", )
         if miles_to_gas_station > 20:
             sleep(1)
             print("***WARNING***\nYou will not reach the closest gas station")
@@ -122,21 +124,18 @@ def gas_level_alert():
                 print("Successfully called emergency contact")
 
     elif gas_level_indicator == "Quarter Tank":
-        print("Your gas tank is at a quarter tank of gas and you have", random.randint(50, 100), "miles left.")
+        print("\nYour gas tank is at a quarter tank of gas and you have", random.randint(50, 100), "miles left.")
         print("The closest gas station is a", list_of_gas_stations(), "gas station", miles_to_gas_station,
               "miles away on")
 
     elif gas_level_indicator == "Half Tank":
-        print("Your gas tank is at half a tank of gas and you have", random.randint(125, 175), "miles left.")
+        print("\nYour gas tank is at half a tank of gas and you have", random.randint(125, 175), "miles left.")
 
     elif gas_level_indicator == "Three Quarter Tank":
-        print("Your gas tank is at three quarters of a tank and you have", random.randint(200, 250), "miles left.")
+        print("\nYour gas tank is at three quarters of a tank and you have", random.randint(200, 250), "miles left.")
 
     elif gas_level_indicator == "Full Tank":
-        print("Your gas tank is at a full tank of gas and you have 300 miles left.")
-
-
-gas_level_alert()
+        print("\nYour gas tank is at a full tank of gas and you have 300 miles left.")
 
 
 # Weather
@@ -150,6 +149,7 @@ picking from a list - using if, elif & else statements
 to check the condition and print a specific list element
 """
 
+
 # Weather condition list using the random.choice library
 # to remember choose a condition and storing it in its brain
 
@@ -161,8 +161,6 @@ def weather():
 
 weather_alert1 = weather()
 # import library here
-
-
 
 
 random_int1 = random.randint(15, 30)
@@ -212,4 +210,10 @@ def vehicle_response_system():
         print("\nBased on the NWS there is clear visibility and a bright, sunny sky.")
 
 
+# *********************************************************************************************************************
+
+# call function here
+
 vehicle_response_system()
+
+gas_level_alert()
